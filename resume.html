@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Resumes of Mohammed Thajul Akber for SOC Analyst, Systems and Network Administrator, and Cybersecurity Research Intern roles.">
+<title>Resume - Mohammed Thajul Akber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: three role tabs above one paper sheet. Section labels sit in a left rail, content on the right. The sheet stays white so it reads like the PDF it mirrors. */
+:root {
+  --bg: #090e18;
+  --surface: #101827;
+  --line: #223149;
+  --fg: #e8edf6;
+  --muted: #93a1bb;
+  --accent: #ffb224;
+  --on-accent: #1a1100;
+  --paper: #ffffff;
+  --ink: #0c1424;
+  --ink-soft: #3d4a60;
+  --rule: #cfd6e2;
+  --brand: #9a5400;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #e9edf4; --surface: #ffffff; --line: #d3dae6; --fg: #0c1424; --muted: #56637b;
+    --accent: #a85d00; --on-accent: #ffffff; color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #e9edf4; --surface: #ffffff; --line: #d3dae6; --fg: #0c1424; --muted: #56637b;
+  --accent: #a85d00; --on-accent: #ffffff; color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 1rem; line-height: 1.55; padding-inline: 16px; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.topbar { max-width: 860px; margin-inline: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding-block: 16px 10px; }
+.topbar .spacer { margin-right: auto; }
+.tb {
+  font: inherit; font-size: 0.85rem; font-weight: 600; text-decoration: none; cursor: pointer;
+  background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px;
+}
+.tb:hover { border-color: var(--accent); }
+.tb.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.tb.mono { font-family: var(--font-mono); font-weight: 400; font-size: 0.78rem; }
+
+.pick { max-width: 860px; margin-inline: auto; padding-bottom: 14px; }
+.pick p { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; max-width: 65ch; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tab {
+  font: inherit; font-family: var(--font-mono); font-size: 0.8rem; cursor: pointer;
+  padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--fg);
+}
+.tab:hover { border-color: var(--accent); }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+
+.sheet {
+  max-width: 860px; margin-inline: auto; margin-bottom: 40px;
+  background: var(--paper); color: var(--ink);
+  border-radius: 6px; padding: clamp(22px, 5vw, 48px);
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px rgba(0, 0, 0, 0.18);
+  font-size: 0.92rem; line-height: 1.5;
+}
+.sheet a { color: var(--ink); text-decoration-color: var(--rule); text-underline-offset: 2px; overflow-wrap: anywhere; }
+.head { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; border-bottom: 2px solid var(--ink); }
+.head h1 { margin: 0; font-family: var(--font-display); font-weight: 900; font-variation-settings: "wdth" 112; font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: -0.01em; line-height: 1.02; text-wrap: balance; }
+.head .role { font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.04em; color: var(--brand); }
+.head .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.85rem; color: var(--ink-soft); }
+
+.row { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 6px 24px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.row:last-child { border-bottom: 0; }
+.label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); padding-top: 3px; }
+.entry + .entry { margin-top: 16px; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; }
+.entry-head h2 { margin: 0; font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; font-variation-settings: "wdth" 108; line-height: 1.25; text-wrap: balance; }
+.entry-head .meta { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-soft); }
+.sub { color: var(--ink-soft); font-size: 0.88rem; }
+.sheet ul { margin: 6px 0 0; padding-left: 1.1rem; }
+.sheet li { margin-bottom: 3px; }
+.sheet p { margin: 0; }
+.certs { list-style: none; padding: 0 !important; display: grid; gap: 8px; margin-top: 0 !important; }
+.certs li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; margin: 0; }
+.certs b { font-weight: 600; }
+.certs .d { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-soft); white-space: nowrap; }
+.certs .i { grid-column: 1 / -1; color: var(--ink-soft); font-size: 0.85rem; }
+.skills { list-style: none; padding: 0 !important; display: grid; gap: 6px; margin-top: 0 !important; }
+.skills li { margin: 0; }
+.skills b { font-weight: 600; }
+
+@media (max-width: 640px) {
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .certs .d { white-space: normal; }
+}
+@media print {
+  @page { size: A4; margin: 11mm 13mm; }
+  html, body { background: #fff !important; }
+  body { padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .topbar, .pick { display: none !important; }
+  .sheet { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; font-size: 9.6pt; line-height: 1.42; }
+  .row { padding-block: 9px; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb" href="index.html">← Portfolio</a>
+  <span class="spacer"></span>
+  <a class="tb primary" id="pdfLink" href="resume-soc-analyst.pdf" target="_blank" rel="noopener">Open PDF</a>
+  <button class="tb mono" id="themeBtn" type="button" aria-label="Switch colour theme">theme</button>
+</div>
+
+<div class="pick">
+  <p>Three versions of my resume, each written for a different role. Pick the one that matches the job.</p>
+  <div class="tabs" role="tablist" aria-label="Resume versions"><button class="tab" id="tab-soc" role="tab" type="button" data-key="soc" data-pdf="resume-soc-analyst.pdf" aria-controls="cv-soc" aria-selected="true">SOC Analyst</button><button class="tab" id="tab-network" role="tab" type="button" data-key="network" data-pdf="resume-network-administrator.pdf" aria-controls="cv-network" aria-selected="false">Systems &amp; Network Administrator</button><button class="tab" id="tab-research" role="tab" type="button" data-key="research" data-pdf="resume-cybersecurity-research-intern.pdf" aria-controls="cv-research" aria-selected="false">Cybersecurity Research Intern</button></div>
+</div>
+
+<main id="resume">
+<article class="sheet" id="cv-soc" role="tabpanel" aria-labelledby="tab-soc">
+  <header class="head">
+    <h1>Mohammed Thajul Akber</h1>
+    <div class="role">SOC ANALYST</div>
+    <div class="contact">
+      <span>Kochi, Kerala, India</span>
+      <a href="mailto:thajulakkuakberkcpk5@gmail.com">thajulakkuakberkcpk5@gmail.com</a>
+      <a href="https://www.linkedin.com/in/thajulakber/" target="_blank" rel="noopener">linkedin.com/in/thajulakber</a>
+      <a href="https://github.com/HoodyK5" target="_blank" rel="noopener">github.com/HoodyK5</a>
+    </div>
+  </header>
+  <section class="row"><div class="label">Professional Summary</div><div><p>CEH v13-certified SOC Analyst with hands-on experience monitoring and responding to security alerts and incidents across SIEM, EDR, and NDR platforms. Skilled in investigating, documenting, and escalating security events, tracking remediation to closure, and coordinating with senior analysts and incident response teams. Applies the Cyber Kill Chain and MITRE ATT&amp;CK frameworks to support security monitoring and cyber incident response, with practical exposure to malware analysis, threat vectors (malware, email, and website-based), and OWASP Top 10 vulnerabilities. Consistently delivers services against SLA and quality targets, contributes to SOC continuous improvement initiatives, and communicates clearly with customers, teammates, and management.</p></div></section>
+  <section class="row"><div class="label">Core Skills</div><ul class="skills"><li><b>Security Monitoring &amp; Incident Response:</b> SIEM/EDR/NDR alert monitoring, cyber incident response, alert triage &amp; investigation, escalation to senior analysts/IR teams, remediation tracking, SLA-driven service delivery</li><li><b>Threat &amp; Risk Frameworks:</b> Cyber Kill Chain, MITRE ATT&amp;CK mapping, threat vector analysis (malware, email, web), IOC extraction, vulnerability identification &amp; mitigation, risk assessments, penetration testing, OWASP Top 10</li><li><b>Security Tools &amp; Platforms:</b> Splunk, Microsoft Sentinel, CrowdStrike, Microsoft Defender, ServiceNow, Wazuh SIEM, Suricata IDS/IPS, Wireshark, Metasploit, Burp Suite, Nmap, OWASP ZAP, SQLmap, Hydra, Gobuster, YARA, Kali Linux</li><li><b>Documentation &amp; Compliance:</b> Security alert analysis documentation, investigation &amp; resolution reporting, compliance reporting, security protocol review</li><li><b>Programming &amp; Systems:</b> Python 3, Bash scripting, API integration, Linux administration, Windows security fundamentals, Docker, TCP/IP, DNS, HTTP/HTTPS, SSH, SMB</li></ul></section>
+  <section class="row"><div class="label">SOC Analyst Experience</div><div><div class="entry"><div class="entry-head"><h2>SOC Analyst, TechByHeart, Kochi, Kerala</h2><span class="meta">Jan 2026 – Jul 2026</span></div><ul><li>Monitored and responded to security alerts and incidents across SIEM and log sources, performing reconnaissance and enumeration to identify exploitable vulnerabilities in web applications.</li><li>Investigated security incidents through threat hunting and log analysis, documenting alert analysis, investigation steps, and resolution, and escalating complex cases to senior analysts and incident response teams.</li><li>Supported vulnerability identification and mitigation, assisting with penetration testing and risk assessments under expert guidance to meet service targets and quality standards.</li><li>Reviewed, documented, and updated security protocols and compliance reports, collaborating with the team to align with industry standards and contribute to SOC continuous improvement.</li></ul></div></div></section>
+  <section class="row"><div class="label">Cybersecurity Projects</div><div><div class="entry"><div class="entry-head"><h2>Enterprise SOC Lab: Automated Threat Detection &amp; Remediation</h2><span class="meta">2026 (ongoing)</span></div><ul><li>Built an enterprise-grade SOC lab using Wazuh SIEM, Suricata IDS/IPS, and the VirusTotal API (90+ engines) with real-time file integrity monitoring and Python/Bash automation, achieving 100% detection across 6 attack scenarios in 5–10 seconds.</li><li>Mapped detections to MITRE ATT&amp;CK techniques via a custom dashboard with TLS-encrypted, failover-ready agent-manager communication for continuous threat research.</li></ul></div><div class="entry"><div class="entry-head"><h2>CID Malware Intelligence Tool (Combat Incident Detection)</h2><span class="meta">2026</span></div><ul><li>Developed a SOC-grade malware intelligence platform integrating VirusTotal, Criminal IP, Hybrid Analysis, and URLScan.io APIs for multi-engine analysis of URLs, domains, IPs, file hashes, and APK files to research malware patterns and IOCs.</li><li>Delivered a real-time Python/Tkinter dashboard with YARA scanning, automated IOC extraction, risk scoring, and PDF/CSV reporting for security documentation.</li></ul></div></div></section>
+  <section class="row"><div class="label">Certifications</div><ul class="certs"><li><b>Certified Ethical Hacker (CEH v13)</b><span class="d">2026</span><span class="i">EC-Council</span></li><li><b>Advanced SOC Analyst (ASA)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Security Tester (CST)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Networking Basics</b><span class="d">2026</span><span class="i">Cisco</span></li><li><b>Fundamentals of Networking</b><span class="d">2025</span><span class="i">Cisco</span></li></ul></section>
+  <section class="row"><div class="label">Education</div><ul class="certs"><li><b>Diploma in Cybersecurity</b><span class="d">2025 – 2026</span><span class="i">TechByHeart, Kochi, Kerala</span></li><li><b>Bachelor of Computer Applications</b><span class="d">2022 – 2025</span><span class="i">St. Mary&#x27;s College, Wayanad, Kerala</span></li></ul></section>
+</article>
+<article class="sheet" id="cv-network" role="tabpanel" aria-labelledby="tab-network" hidden>
+  <header class="head">
+    <h1>Mohammed Thajul Akber</h1>
+    <div class="role">SYSTEMS &amp; NETWORK ADMINISTRATOR</div>
+    <div class="contact">
+      <span>Kochi, Kerala, India</span>
+      <a href="mailto:thajulakkuakberkcpk5@gmail.com">thajulakkuakberkcpk5@gmail.com</a>
+      <a href="https://www.linkedin.com/in/thajulakber/" target="_blank" rel="noopener">linkedin.com/in/thajulakber</a>
+      <a href="https://github.com/HoodyK5" target="_blank" rel="noopener">github.com/HoodyK5</a>
+    </div>
+  </header>
+  <section class="row"><div class="label">Professional Summary</div><div><p>Motivated and detail-oriented IT professional with hands-on, practical experience supporting network and system operations in a live SOC environment. Comfortable working across Windows and Linux systems, TCP/IP-based networks, and core network services (DNS, DHCP, HTTP/HTTPS, SSH, SMB). Experienced in monitoring system and network performance, identifying and escalating issues, applying patches and updates, and maintaining clear technical documentation. Strong foundation in networking concepts, Linux administration, and troubleshooting, gained through formal training, certification, and applied lab projects. Quick to learn new tools and technologies, with strong problem-solving skills and a collaborative, team-first approach to IT support.</p></div></section>
+  <section class="row"><div class="label">Core Skills</div><ul class="skills"><li><b>Networking Fundamentals:</b> TCP/IP, DNS, DHCP, HTTP/HTTPS, SSH, SMB, network performance monitoring, network troubleshooting</li><li><b>Systems Administration:</b> Windows Server &amp; Windows security fundamentals, Linux administration, system updates &amp; patch management, routine backups, Docker</li><li><b>IT Support &amp; Operations:</b> First-level troubleshooting, incident monitoring &amp; escalation, IT documentation, inventory management, SLA-driven service delivery, disaster recovery support</li><li><b>Tools &amp; Platforms:</b> Splunk, Microsoft Sentinel, ServiceNow, Wazuh, Wireshark, Nmap, Kali Linux, Python 3, Bash scripting, API integration</li><li><b>Security Awareness:</b> Data security best practices, vulnerability identification, OWASP Top 10, compliance &amp; security protocol documentation</li></ul></section>
+  <section class="row"><div class="label">Internship Experience</div><div><div class="entry"><div class="entry-head"><h2>IT Support Intern, TechByHeart, Kochi, Kerala</h2><span class="meta">Jan 2026 – Jul 2026</span></div><div class="sub">Supported day-to-day monitoring, troubleshooting, and documentation of IT and network infrastructure</div><ul><li>Monitored network and system performance across SIEM and log sources, identifying anomalies and supporting timely first-level response to system and network issues.</li><li>Assisted with system updates, patch management, and routine maintenance tasks to keep infrastructure secure and available.</li><li>Investigated and documented technical issues end-to-end – from initial detection through resolution – and escalated complex cases to senior team members in line with SLA targets.</li><li>Reviewed and maintained IT documentation, including system/security protocols and compliance records, ensuring accuracy and alignment with organizational standards.</li><li>Collaborated with a cross-functional IT team to support data security, system availability, and disaster recovery readiness.</li></ul></div></div></section>
+  <section class="row"><div class="label">Applied Projects</div><div><div class="entry"><div class="entry-head"><h2>Enterprise IT Lab: Automated Monitoring &amp; Alerting</h2><span class="meta">2026 – ongoing</span></div><ul><li>Built a multi-system lab environment for infrastructure monitoring using Wazuh and Suricata, with real-time file integrity monitoring and Python/Bash automation, achieving reliable detection across 6 test scenarios in 5–10 seconds.</li><li>Configured TLS-encrypted, failover-ready agent-manager communication between systems to ensure continuous monitoring uptime.</li></ul></div><div class="entry"><div class="entry-head"><h2>Network &amp; Endpoint Intelligence Dashboard</h2><span class="meta">2026</span></div><ul><li>Developed a Python/Tkinter desktop application integrating multiple threat-intelligence APIs for analysis of URLs, domains, IPs, and file hashes, with automated reporting.</li><li>Delivered a real-time dashboard with automated data extraction, risk scoring, and PDF/CSV reporting for technical documentation.</li></ul></div></div></section>
+  <section class="row"><div class="label">Certifications</div><ul class="certs"><li><b>Certified Ethical Hacker (CEH v13)</b><span class="d">2026</span><span class="i">EC-Council</span></li><li><b>Advanced SOC Analyst (ASA)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Security Tester (CST)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Networking Basics</b><span class="d">2026</span><span class="i">Cisco</span></li><li><b>Fundamentals of Networking</b><span class="d">2025</span><span class="i">Cisco</span></li></ul></section>
+  <section class="row"><div class="label">Education</div><ul class="certs"><li><b>Diploma in Cybersecurity</b><span class="d">2025 – 2026</span><span class="i">TechByHeart, Kochi, Kerala</span></li><li><b>Bachelor of Computer Applications</b><span class="d">2022 – 2025</span><span class="i">St. Mary&#x27;s College, Wayanad, Kerala</span></li></ul></section>
+</article>
+<article class="sheet" id="cv-research" role="tabpanel" aria-labelledby="tab-research" hidden>
+  <header class="head">
+    <h1>Mohammed Thajul Akber</h1>
+    <div class="role">CYBERSECURITY RESEARCH INTERN</div>
+    <div class="contact">
+      <span>Kochi, Kerala, India</span>
+      <a href="mailto:thajulakkuakberkcpk5@gmail.com">thajulakkuakberkcpk5@gmail.com</a>
+      <a href="https://www.linkedin.com/in/thajulakber/" target="_blank" rel="noopener">linkedin.com/in/thajulakber</a>
+      <a href="https://github.com/HoodyK5" target="_blank" rel="noopener">github.com/HoodyK5</a>
+    </div>
+  </header>
+  <section class="row"><div class="label">Professional Summary</div><div><p>CEH v13-certified cybersecurity graduate with hands-on experience researching threats, vulnerabilities, and malware patterns, and translating findings into clear technical documentation and reports. Practical exposure to web and network security, open-source intelligence (OSINT), IOC extraction, and MITRE ATT&amp;CK-mapped threat analysis using tools including Wireshark, Metasploit, Burp Suite, and Kali Linux. Skilled at breaking down technical security concepts into clear, beginner-friendly, well-documented material, with strong analytical and research skills and a fast-learning, detail-oriented approach. Eager to research emerging cybersecurity trends, support the development of training content and lab exercises, and contribute to a cybersecurity learning team.</p></div></section>
+  <section class="row"><div class="label">Core Skills</div><ul class="skills"><li><b>Threat Research and Analysis:</b> Threat intelligence research, malware pattern analysis, IOC extraction, OSINT, MITRE ATT&amp;CK mapping, security event correlation, log analysis</li><li><b>Web and Network Security:</b> OWASP Top 10 (SQL Injection, XSS, Broken Access Control, Authentication and Session testing), vulnerability identification and mitigation, penetration testing, firewalls, IDS/IPS (Suricata), TCP/IP, DNS, HTTP/HTTPS, SSH, SMB, network traffic analysis</li><li><b>Security Documentation and Reporting:</b> Technical summaries, research notes, incident documentation and escalation, compliance reporting, security policy and protocol review, presentation preparation</li><li><b>Tools:</b> Wireshark, Metasploit, Burp Suite, Kali Linux, Nmap, OWASP ZAP, SQLmap, Hydra, Gobuster, YARA, Wazuh SIEM, VirusTotal API</li><li><b>Programming and Systems:</b> Python 3, Bash scripting, API integration, Linux administration, Windows security fundamentals, Docker</li><li><b>Professional:</b> Analytical thinking, research and documentation, clear technical communication, quick learner, detail-oriented, team collaboration, mentoring and peer support</li></ul></section>
+  <section class="row"><div class="label">Internship Experience</div><div><div class="entry"><div class="entry-head"><h2>Cybersecurity Intern, TechByHeart, Kochi, Kerala</h2><span class="meta">January 2026 to July 2026</span></div><ul><li>Researched and analyzed security alerts, logs, and system activity, performing reconnaissance and enumeration to identify exploitable vulnerabilities in web applications.</li><li>Studied emerging vulnerabilities and mitigation strategies, supporting penetration testing and risk assessments under expert guidance.</li><li>Investigated real-world security incidents through threat hunting and log analysis, producing clear incident documentation and technical summaries to support escalation.</li><li>Reviewed, documented, and updated security protocols and compliance reports, collaborating within a team to align with industry standards and best practices.</li><li>Researched current attack techniques and defensive technologies as part of ongoing professional development, and shared findings informally with team members.</li></ul></div></div></section>
+  <section class="row"><div class="label">Cybersecurity Research Projects</div><div><div class="entry"><div class="entry-head"><h2>Enterprise SOC Lab: Automated Threat Detection and Remediation</h2><span class="meta">2026, ongoing</span></div><ul><li>Built an enterprise-grade SOC lab using Wazuh SIEM, Suricata IDS/IPS, and the VirusTotal API (90+ engines) with real-time file integrity monitoring and Python/Bash automation, achieving 100% detection across 6 attack scenarios in 5 to 10 seconds.</li><li>Mapped detections to MITRE ATT&amp;CK techniques via a custom dashboard with TLS-encrypted, failover-ready agent-manager communication to support ongoing threat research.</li></ul></div><div class="entry"><div class="entry-head"><h2>CID Malware Intelligence Tool (Combat Incident Detection)</h2><span class="meta">2026</span></div><ul><li>Developed a SOC-grade malware intelligence platform integrating VirusTotal, Criminal IP, Hybrid Analysis, and URLScan.io APIs for multi-engine research of URLs, domains, IPs, file hashes, and APK files to study malware patterns and IOCs.</li><li>Delivered a real-time Python/Tkinter dashboard with YARA scanning, automated IOC extraction, risk scoring, and PDF/CSV reporting for clear security documentation.</li></ul></div></div></section>
+  <section class="row"><div class="label">Certifications</div><ul class="certs"><li><b>Certified Ethical Hacker (CEH v13)</b><span class="d">2026</span><span class="i">EC-Council</span></li><li><b>Advanced SOC Analyst (ASA)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Security Tester (CST)</b><span class="d">2026</span><span class="i">TechByHeart</span></li><li><b>Networking Basics</b><span class="d">2026</span><span class="i">Cisco</span></li><li><b>Fundamentals of Networking</b><span class="d">2025</span><span class="i">Cisco</span></li></ul></section>
+  <section class="row"><div class="label">Education</div><ul class="certs"><li><b>Diploma in Cybersecurity</b><span class="d">2025 – 2026</span><span class="i">TechByHeart, Kochi, Kerala</span></li><li><b>Bachelor of Computer Applications</b><span class="d">2022 – 2025</span><span class="i">St. Mary&#x27;s College, Wayanad, Kerala</span></li></ul></section>
+</article>
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function isDark() {
+    var t = root.getAttribute("data-theme");
+    if (t) return t === "dark";
+    return !(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches);
+  }
+  function label() { btn.textContent = isDark() ? "light mode" : "dark mode"; }
+  try { var saved = localStorage.getItem("tk-theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  label();
+  btn.addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("tk-theme", next); } catch (e) {}
+    label();
+  });
+
+  /* Resume version tabs */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+  var pdf = document.getElementById("pdfLink");
+  function show(key, setHash) {
+    var found = false;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute("data-key") === key;
+      if (on) found = true;
+    });
+    if (!found) key = tabs[0].getAttribute("data-key");
+    tabs.forEach(function (t) {
+      var on = t.getAttribute("data-key") === key;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById("cv-" + t.getAttribute("data-key")).hidden = !on;
+      if (on) pdf.setAttribute("href", t.getAttribute("data-pdf"));
+    });
+    if (setHash) { try { history.replaceState(null, "", "#" + key); } catch (e) { location.hash = key; } }
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { show(t.getAttribute("data-key"), true); });
+    t.addEventListener("keydown", function (e) {
+      var n = e.key === "ArrowRight" ? i + 1 : e.key === "ArrowLeft" ? i - 1 : null;
+      if (n === null) return;
+      n = (n + tabs.length) % tabs.length;
+      tabs[n].focus(); show(tabs[n].getAttribute("data-key"), true);
+    });
+  });
+  show((location.hash || "").replace("#", ""), false);
+  window.addEventListener("hashchange", function () { show((location.hash || "").replace("#", ""), false); });
+})();
+</script>
+</body>
+</html>
